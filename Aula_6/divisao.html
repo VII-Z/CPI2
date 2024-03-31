@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Divisão</title>
+    </head>
+    <body>
+        <h1>Cálculo de Divisão</h1>
+        <p>Digite dois números inteiros nos espaços a baixo:</p>
+        <p>Dividendo: <input id="dividendo"></p>
+        <p>Divisor: <input id="divisor"></p>
+        <button onclick="calculo()">Calcular</button>
+        <h3>O resultado é: </h3>
+        <p id="resultado"></p>
+    </body>
+    <script>
+        function calculo(){
+            var dividendo = parseInt(document.getElementById("dividendo").value);
+            var divisor = parseInt(document.getElementById("divisor").value);
+            var quociente = dividendo/divisor;
+            var resto = dividendo % divisor;
+            document.getElementById("resultado").innerHTML="Dividendo: " + dividendo + "<br>" +
+                                                            "Divisor: " + divisor + "<br>" +
+                                                            "Quociente: " + quociente + "<br>" +
+                                                            "Resto: " + resto;
+        }
+    </script>
+</html>
