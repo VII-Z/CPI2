@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Comando return</title>
+    </head>
+    <body>
+    <script>
+        function quadrado (x)
+        {
+            return x * x;
+        }
+        x=2;
+        y=quadrado(x*2+5);
+        document.write("valor de x: " + x + "<br/>");
+        document.write("valor de y: " + y + "<br/>");
+        z=quadrado (quadrado(x));
+        document.write("valor de z: " + z);
+      </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Comando return</title>
+    </head>
+    <body>
+    <script>
+    function montalista()
+    { 
+        document.write("<UL>");
+        while (true)
+        {
+            num=prompt("Digite um número: ");
+            if (parseInt(num) == 0)return;
+            document.write("<LI>" + num + "</LI>");
+        }
+        document.write("</UL>");
+    }
+    montalista();
+    
+    </script>
+    </body>
+
+</html>
