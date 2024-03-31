@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Peso Ideal</title>
+    </head>
+    <body>
+        <script>
+            var altura = parseFloat(prompt("Insira a altura:"));
+            var sexo = prompt("Insira o sexo(M/F):").toUpperCase();
+
+            if (sexo == "M"){
+                pesoIdeal = (72.7*altura) - 58
+                alert("O valor do peso ideal é " + pesoIdeal.toFixed(2)+ "kg");
+            }
+            else {
+                pesoIdeal = (62.1*altura) - 44.7
+                alert("O valor do peso ideal é " + pesoIdeal.toFixed(2)+"kg");
+            }
+        </script>
+    </body>
+</html>

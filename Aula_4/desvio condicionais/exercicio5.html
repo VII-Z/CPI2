@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Salário</title>
+    </head>
+    <body>
+        <script>
+        var salario = prompt("Informe o salário do funcionário:");
+            salario = parseInt(salario);
+            var novo_salario = 0;
+            if (salario <= 300){
+                novo_salario = salario * 1.15
+                document.write("O novo salário é de " + novo_salario.toFixed(2));
+            }
+            else {
+                novo_salario = salario * 1.10
+                document.write("O novo salário é de " + novo_salario.toFixed(2));
+            }
+        </script>
+    </body>
+</html>

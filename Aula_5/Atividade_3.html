@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Média dos números</title>
+    </head>
+    <body>
+        <script text="type/javascript">
+            var numero_digitado = 0;
+            var soma = 0;
+            
+            while (true){
+                var numero = parseInt(prompt("Digite um valor ou um número negativo para encerar:"));
+                if (numero<=0){
+                    break;
+                }
+                
+                numero_digitado++;
+                soma +=numero;
+            }
+            if(numero_digitado===0){
+                alert("Nenhum número positivo foi digitado.")
+            }else{
+            var media = soma/numero_digitado;
+            alert("A média dos número positivos digitados é: "+ media.toFixed(2));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Alterando o conteúdo de tags HTML</title>
+    </head>
+    <body>
+        <h1>Praticando o conteúdo da aula: </h1>
+        Base: <input id="base">
+        Altura: <input id="altura">
+        <button onClick="calcular_area()">OK</button>
+        <p>Resposta:</p>
+        <p id="resultado">O resultado do cálculo é...</p>
+    </body>
+    <script type="text/javascript">
+        function calcular_area(){
+            var base = document.getElementById("base").value;
+            var altura = document.getElementById("altura").value;
+            var area = parseInt(base)*parseInt(altura)/2;
+            document.getElementById("resultado").innerHTML = "A área do triângulo é "+ area;
+        }
+    </script>
+</html>

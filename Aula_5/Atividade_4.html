@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Atividade 4</title>
+    </head>
+    <body>
+        <p> Faça um algoritmo, utilizando o laço do-while, que leia números e apresente sua soma e sua média. Admita que o valor 9999 é utilizado como sentinela/chave para fim de leitura.</p>
+        <script text="text/javascript">
+            var numero;
+            var soma = 0;
+            var quantidade = 0;
+            do{
+                numero = parseFloat(prompt("Digite um número ou 9999 para encerrar a leitura:"));
+                if(numero!==9999){
+                    soma += numero;
+                    quantidade++;
+                }
+            }
+            while(numero != 9999);
+            var media = soma/quantidade;
+            document.write("Soma= " + soma + " Média = "+ media.toFixed(2));
+        </script>
+    </body>
+</html>

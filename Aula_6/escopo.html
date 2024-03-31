@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Variáveis contadoras</title>
+    </head>
+    <body>
+        <button onclick="clicou()">Clique aqui!</button>
+        <p id="contador">Clique no botão</p>
+    </body>
+    <script type="text/javascript">
+        var contador = 0;
+        function clicou(){
+            contador = contador + 1;
+            document.getElementById("contador").innerHTML = "Você clicou " + contador + " vez(es)!";
+        }
+    </script>
+</html>

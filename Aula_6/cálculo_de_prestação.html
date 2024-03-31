@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cálculo de Prestação</title>
+    </head>
+    <body>
+        <h1>Calcule sua prestação:</h1>
+        Valor da prestação: <input id="valor_prest"><br/>
+        Taxa aplicada: <input id="taxa"><br/>
+        Quantidade de dias em atraso: <input id="tempo"><br/>
+        <button onclick="calculo()">Calcular!</button>
+        <p>Resposta:</p>
+        <p id="resultado">O resultado é...</p>
+    </body>
+    <script text="text/javascript">
+        function calculo(){
+            var valor = parseFloat(document.getElementById("valor_prest").value);
+            var taxa = parseFloat(document.getElementById("taxa").value);
+            var tempo = parseInt(document.getElementById("tempo").value);
+            var prestação = valor+(valor*(taxa/100)*tempo);
+            document.getElementById("resultado").innerHTML = "O valor da prestação ficou R$" + prestação.toFixed(2) + ".";
+        }
+    </script>
+</html>
