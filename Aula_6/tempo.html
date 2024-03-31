@@ -2,9 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Tempo Decorrido</title>
     </head>
     <body>
-        
+        <h1>Calculadora de Tempo</h1>
+        <p>Digite a hora (formato 24 horas): <input id="hora"></p>
+        <button onclick="calcular()">Calcular</button>
+        <p id="resultado"></p>
     </body>
-</html>
+        <script type="text/javascript">
+            function calcular(){
+                var horaInput = document.getElementById("hora").value;
+                var hora = parseInt(horaInput);
+                var minutos = 0;
+                var minutosDecorridos = horaInput * 60 + minutos;
+                document.getElementById("resultado").innerText = "Minutos decorridos desde o início do dia: " + minutosDecorridos;
+            }
+        </script>
+    </html>
