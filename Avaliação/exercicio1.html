@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 1 - Volume Lata de Óleo</title>
+        <style type="text/css">
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Comando:<br/>
+        Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, utilizando a fórmula VOLUME = 3,14159 * RAIO2 * ALTURA.</p>
+        <h1>Calculadora de Volume</h1>
+        Raio: <input id="raio">
+        Altura: <input id="altura"><br/>
+        <p id="resultado"> Volume = </p> 
+        <button onclick="calculo()">Calcular</button>
+        <script type="text/javascript">
+            function calculo(){
+                var raio = document.getElementById("raio").value;
+                var altura = document.getElementById("altura").value;
+                var volume = 3.14159 * (parseFloat(raio)*parseFloat(raio)) * parseInt(altura);
+                document.getElementById("resultado").innerHTML ="Volume = " + volume.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
+
