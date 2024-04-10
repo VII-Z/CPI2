@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício 3 - Calculadora de Salário</title>
+        <style type="text/css">
+            h1{
+                text-align: center;
+            }
+            input{
+                width: 100px;
+                margin: 10px;
+            }
+            button{
+                width: 70px;
+                border: 1px solid black;
+                border-radius: 8px;
+                background-color: lightcoral;
+                margin-left: 28%;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Comando:<br/>Faça um algoritmo que:<br/>
+            a) Obtenha o valor para a variável HT (horas trabalhadas no mês);<br/>         
+            b) Obtenha o valor para a variável VH (valor hora trabalhada):<br/>
+            c) Obtenha o valor para a variável PD (percentual de desconto);<br/>
+            d) Calcule o salário bruto: SB = HT * VH;<br/>
+            e) Calcule o total de desconto: TD = (PD/100)*SB;<br/>
+            f) Calcule o salário líquido: SL = SB – TD;<br/>
+            g) Apresente os valores de: Horas trabalhadas, Salário Bruto, Desconto, Salário Liquido.</p>
+        <p>----------------------------------------------------------------------------------------------------------------</p> 
+        <h1>Calculadora de Salário</h1>
+        Horas Trabalhadas: <input id="ht">
+        Valor da Hora Trabalhada: <input id="vh">
+        Valor do Percentual de Desconto:<input id="pd"><br/><br/>
+        <button onclick="calculo()">Calcular</button> 
+        <p id="resultado">Os valores são:</p>
+        <script type="text/javascript">
+            function calculo(){
+                var ht = parseFloat(document.getElementById("ht").value);
+                var vh = parseFloat(document.getElementById("vh").value);
+                var pd = parseFloat(document.getElementById("pd").value);
+
+                sb = ht * vh; // salário bruto
+                td = (pd/100)*sb; // total de desconto
+                sl = sb -td;
+
+                document.getElementById("resultado").innerHTML = `<p>Horas trabalhadas = ${ht} </p>
+                <p>Salário Bruto = ${sb}</p>
+                <p>Desconto = ${td}</p>
+                <p>Salário Liquido = ${sl}</p>`
+        }
+        </script>
+        
+    </body>
+</html>
