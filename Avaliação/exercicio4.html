@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 4 - Lados de Um Triângulo</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Comando</h1>
+
+    <p>Ler três valores para os lados de um triângulo, considerando lados como A, B e C.</p>
+    <p>Verificar se os lados fornecidos formam realmente um triângulo, e se for esta condição verdadeira, deverá ser
+        indicado qual tipo de triângulo foi formado: isósceles, escaleno ou equilátero.</p>
+    <p>(DICA: pesquise qual é a condição para existência de um triângulo e a implemente no seu programa)</p>
+
+    <hr />
+
+    <h1>É um triângulo válido?</h1>
+
+    Primeiro Lado: <input id="1" type="number" min="0"><br />
+    Segundo Lado: <input id="2" type="number" min="0"><br />
+    Terceiro Lado: <input id="3" type="number" min="0"><br /><br />
+    <button onclick="calculo()">Calcular</button>
+
+    <hr />
+
+    <h1>Resultado</h1>
+
+    <p id="resultado"></p>
+
+
+    <script type="text/javascript">
+        function calculo() {
+            let l1 = parseFloat(document.getElementById("1").value);
+            let l2 = parseFloat(document.getElementById("2").value);
+            let l3 = parseFloat(document.getElementById("3").value);
+
+            const result = triangulo(l1, l2, l3);
+
+            if (result[0]) {
+                document.getElementById("resultado").innerHTML = `Os valores oferecidos formam um triângulo ${result[1]}`;
+            } else {
+                document.getElementById("resultado").innerHTML = "Os valores oferecidos não formam um triângulo";
+            }
+
+        }
+
+        function triangulo(l1, l2, l3) {
+
+            const values = [l1, l2, l3];
+            const result = values.filter(function (number, i, values) {
+                return values.indexOf(number) === i;
+            });
+
+            if (l1 == l2 && l2 == l3) {
+                return [true, "Equilátero"];
+            }
+
+            const condition = (l1 + l2) > l3 && (l2 + l3) > l1 && (l3 + l1) > l2
+
+            switch (condition) {
+                case true:
+                    if (result.length == 3) {
+                        return [true, "Escaleno"]
+                    }
+
+                    if (result.length == 2) {
+                        return [true, "Isósceles"]
+                    }
+                    break;
+
+                case false:
+                    return [false, ''];
+                    break;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

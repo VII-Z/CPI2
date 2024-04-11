@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 5 - Maior e Menor</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Comando</h1>
+
+    <p> Ler cinco valores numéricos inteiros, identificar e apresentar o maior e o menor valor informado.</p>
+    <p> Os valores devem ser informados em qualquer ordem pelo usuário e o seu programa deve ser capaz de identificar o
+        maior e o menor valor.</p>
+
+    <hr />
+
+    <h1>Qual o Menor ou Maior?</h1>
+
+    Primeiro Número: <input id="1" type="number"><br />
+    Segundo Número: <input id="2" type="number"><br />
+    Terceiro Número: <input id="3" type="number"><br />
+    Quarto Número: <input id="4" type="number"><br />
+    Quinto Número: <input id="5" type="number"><br />
+    <button onclick="calculo()">Calcular</button>
+
+    <hr />
+
+    <h1>Resultado</h1>
+
+    <p id="resultado"></p>
+
+
+    <script type="text/javascript">
+        function calculo() {
+            let n1 = parseFloat(document.getElementById("1").value);
+            let n2 = parseFloat(document.getElementById("2").value);
+            let n3 = parseFloat(document.getElementById("3").value);
+            let n4 = parseFloat(document.getElementById("4").value);
+            let n5 = parseFloat(document.getElementById("5").value);
+
+            const nums = [n1, n2, n3, n4, n5];
+
+            const result = min_max(nums);
+
+            document.getElementById("resultado").innerHTML = `O menor valor é ${result[0]}, e o maior é ${result[1]}`;
+        }
+
+        function min_max(arr) {
+            let min = 0;
+            let max = 0;
+
+            for (let i = 0; i <= 4; i++) {
+                if (i == 0) {
+                    min = arr[0]
+                    max = arr[0];
+                }
+
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+
+            return [min, max];
+        }
+    </script>
+
+</body>
+
+</html>
