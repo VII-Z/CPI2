@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício 8 - Dez Números</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body onload="numeros()">
+
+    <h1>Comando</h1>
+    <p>Ler 10 números inteiros quaisquer e armazenar em um vetor.</p>
+    <p>Imprimir uma listagem numerada contendo cada número do vetor (sem alterar a ordenação) e uma das mensagens: par
+        ou ímpar, para cada um deles. </p>
+
+
+    <hr />
+
+    <h1>Resultado</h1>
+
+    <ol id="resultado"> </ol>
+
+
+    <script type="text/javascript">
+        function numeros() {
+            let nums = [];
+
+            for (let i = 0; i <= 9; i++) {
+                while (1 == 1) {
+                    const temp = parseInt(prompt(`Digite um número (${i + 1}/10):`));
+
+                    if (!isNaN(temp)) {
+                        nums.push(temp);
+                        break;
+                    }
+                }
+            }
+
+            let str = "";
+            nums.forEach((x) => {
+                even = x % 2 == 0 ? "par" : "ímpar";
+                str += `<li>${x} -> ${even}</li>`.toString();
+            });
+            document.getElementById("resultado").innerHTML = str;
+        }
+
+    </script>
+
+</body>
+
+</html>
