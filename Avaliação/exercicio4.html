@@ -55,11 +55,11 @@
                 return values.indexOf(number) === i;
             });
 
-            if (l1 == l2 && l2 == l3) {
+            if (result.length == 1) {
                 return [true, "Equilátero"];
             }
 
-            const condition = (l1 + l2) > l3 && (l2 + l3) > l1 && (l3 + l1) > l2
+            const condition = (l1 + l2) > l3 && (l2 + l3) > l1 && (l3 + l1) > l2;
 
             switch (condition) {
                 case true:
