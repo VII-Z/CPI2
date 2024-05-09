@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Exercício 9 - Ler Nomes e Selecionar</title>
+</head>
+
+<body>
+    <h1>Comando</h1>
+    <p> Criar um algoritmo que armazene em um vetor cinco nomes quaisquer
+        (informados pelo usuário) e depois possa ser digitado um número que corresponde a
+        uma pessoa e imprimir esse nome. Exemplo de entrada e saída:</p>
+    <hr />
+    <h1>Escolher nome</h1>
+
+    <label for="number">Escolha o número da pessoa desejada</label>
+    <input id="input" name="number" type="number" min="1" max="5" step="1" required /> <br />
+    <button id="confirmar">Pesquisar</button>
+
+    <h1>Resultado</h1>
+
+    <p id="resultado"></p>
+
+    <script type="text/javascript">
+
+
+        let nomes = [];
+        for (let i = 0; i <= 4; i++) {
+            nomes.push(prompt(`Digite um nome (${i + 1}/5)`));
+        }
+
+        function query(number) {
+
+            return `${number}. ${nomes[number - 1]}`;
+        }
+
+        document.getElementById("confirmar")
+            .addEventListener(
+                "click",
+                () => {
+                    document.getElementById("resultado").innerHTML = query(document.getElementById("input").value);
+                });
+
+        function checkmaxmin() {
+            let input = document.getElementById("input");
+            if(input.value >=6) {
+                input.value = 5;
+                return;
+            }
+
+            if(input.value <= 0) {
+                input.value = 1;
+            }
+        }
+
+        setInterval(checkmaxmin, 1);
+    </script>
+</body>
+
+</html>
