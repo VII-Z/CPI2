@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Exercício 10 - Ler Dez Números e Organizar</title>
 </head>
+
 <body>
     <h1>Comando</h1>
-        <p>Ler 10 números inteiros quaisquer e armazenar em um vetor. Imprimir os números que foram armazenados em ordem crescente e depois em ordem decrescente.</p>
-    <hr/>
+    <p>Ler 10 números inteiros quaisquer e armazenar em um vetor. Imprimir os números que foram armazenados em ordem
+        crescente e depois em ordem decrescente.</p>
+    <hr />
+
+    <h1>Resultado</h1>
+
+    <p>Ordem crescente</p>
+    <ol id="crescente"></ol>
+    <br>
+    <p>Ordem decrescente</p>
+    <ol id="decrescente"></ol>
+
     <script type="text/javascript">
         function armazenarNumeros() {
-        var numeros = [];
-        for (var i = 1; i <= 10; i++) {
-            var numero = parseInt(prompt("Insira o número " + i + ":"));
-            numeros.push(numero);
+            var numeros = [];
+
+            for (let i = 0; i <= 9; i++) {
+                while (1 == 1) {
+                    const temp = parseInt(prompt(`Digite um número (${i + 1}/10):`));
+
+                    if (!isNaN(temp)) {
+                        numeros.push(temp);
+                        break;
+                    }
+                }
+            }
+
+            let upperStr = "";
+            let upper = numeros.sort((a, b) => { return a - b; });
+            numeros.forEach((x) => {
+                    upperStr += `<li>${x}</li>`;
+            });
+
+            console.log(upperStr);
+
+            let lowerStr = "";
+            let lower = upper
+            .reverse()
+            .forEach((x) => {
+                lowerStr += `<li>${x}</li>`;
+            });
+
+            document.getElementById("crescente").innerHTML = upperStr;
+            document.getElementById("decrescente").innerHTML = lowerStr;
         }
+
         armazenarNumeros();
-        }
     </script>
 </body>
+
 </html>
