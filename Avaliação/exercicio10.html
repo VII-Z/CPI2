@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h1>Comando</h1>
+        <p>Ler 10 números inteiros quaisquer e armazenar em um vetor. Imprimir os números que foram armazenados em ordem crescente e depois em ordem decrescente.</p>
+    <hr/>
+    <script type="text/javascript">
+        function armazenarNumeros() {
+        var numeros = [];
+        for (var i = 1; i <= 10; i++) {
+            var numero = parseInt(prompt("Insira o número " + i + ":"));
+            numeros.push(numero);
+        }
+        armazenarNumeros();
+        }
+    </script>
+</body>
+</html>

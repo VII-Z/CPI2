@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Comando</h1>
+        <p>Escreva um programa para ler uma temperatura em graus Fahrenheit OU em graus Celsius (crie um input para cada temperatura). Crie dois botões: ao clicar no primeiro, é realizada a conversão da temperatura informada em graus Fahrenheit para Celsius, e ao clicar no segundo, é realizada a conversão da temperatura em graus Celsius para Fahrenheit.  Faça uma função chamada "celsius" para calcular o valor correspondente em graus Celsius, fórmula: C = ((F-32)/9)*5 e uma outra função chamada "fahrenheit" para calcular o valor correspondente em graus Fahrenheit, fórmula: F = (9 * C + 160) / 5. 
+        </p>
+        <hr/>
+    <h1>Conversor de Temperatura</h1>
+    <label for="tempFahrenheit">Temperatura em Fahrenheit:</label>
+    <input type="number" id="tempFahrenheit">
+    <button onclick="converterParaCelsius()">Converter para Celsius</button>
+    
+    <br><br>
+    
+    <label for="tempCelsius">Temperatura em Celsius:</label>
+    <input type="number" id="tempCelsius">
+    <button onclick="converterParaFahrenheit()">Converter para Fahrenheit</button>
+    
+    <script>
+        function celsius(tempF) {
+            return ((tempF - 32) / 9) * 5;
+        }
+        
+        function fahrenheit(tempC) {
+            return (9 * tempC + 160) / 5;
+        }
+        
+        function converterParaCelsius() {
+            var tempF = parseFloat(document.getElementById("tempFahrenheit").value);
+            if (tempF !== "") {
+                var tempC = celsius(tempF);
+                document.getElementById("tempCelsius").value = tempC.toFixed(2);
+                document.getElementById("tempFahrenheit").value = "";
+            } else {
+                alert("Por favor, insira uma temperatura em Fahrenheit.");
+            }
+        }
+        
+        function converterParaFahrenheit() {
+            var tempC = parseFloat(document.getElementById("tempCelsius").value);
+            if (tempC !== "") {
+                var tempF = fahrenheit(tempC);
+                document.getElementById("tempFahrenheit").value = tempF.toFixed(2);
+                document.getElementById("tempCelsius").value = "";
+            } else {
+                alert("Por favor, insira uma temperatura em Celsius.");
+            }
+        }
+    </script>
+</body>
+</html>
