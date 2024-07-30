@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<title>Exemplo  - Operação Matemática</title>
+</head>
+<body>
+    <section id="principal">
+        <form name="cal">
+            <h2>Soma ou Multiplica</h2>
+            Valor 1:<input type="text" name="v1" value="" pattern="^[0-9]\d*(\.\d+)?$"  required>
+            Valor 2:<input type="text" name="v2" value="" pattern="^[0-9]\d*(\.\d+)?$"  required>
+            Valor 3:<input type="text" name="v3" value="" pattern="^[0-9]\d*(\.\d+)?$">
+            <span class="erro" id="erro"></span>
+            <hr>
+            <input type="button" name="soma" value="Soma">
+            <input type="button" name="multiplica" value="Multiplica">
+            <hr>
+            Resultado: <span id="resultado"></span>
+        </form>
+    </section>
+</body>
+<script src="script.js">
+</script>
+</html>

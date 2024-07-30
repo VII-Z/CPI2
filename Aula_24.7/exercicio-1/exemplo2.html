@@ -24,9 +24,7 @@
 				        	`<tr>
 				                <td>${produto.nome}</td>
 				                <td>${produto.preco}</td>
-				                <td><input type='text' name=${produto.nome} data-preco=${produto.preco}
-				                pattern='^[0-9]\\d*(\\.\\d+)?$'
-				                > kg</td>
+				                <td><input type='text' name=${produto.nome} data-preco=${produto.preco} pattern="^[0-9]\d*(\.\d+)?$" > kg</td>
 				            </tr>`
 				        );
 				    });
@@ -37,8 +35,8 @@
 			<input type="button" id="calcula" value="Calcula Preço Total">
 		</form>
 	</section>
-	<script src="js/validaCampo.js"></script>
-	<script src="js/calculaCompra.js"></script>
+	<script src="js/validaCampos.js"></script>
 	<script src="js/novaJanela.js"></script>
+	<script src="js/calculaCompra.js"></script>
 </body>
 </html>
