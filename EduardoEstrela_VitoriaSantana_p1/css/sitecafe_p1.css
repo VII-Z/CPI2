@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+body{
+    font-family: "Handlee",sans-serif;
+    font-size: 1.2rem;
+    color: #FFEBB7;
+    background-image: url("/EduardoEstrela_VitoriaSantana_p1/img/Fundo.jpg");
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #d8bfa4;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.header img{
+    width: 500px;
+    height: 150px;
+}
+
+

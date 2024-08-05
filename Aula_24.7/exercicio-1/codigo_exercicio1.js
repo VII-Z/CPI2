@@ -1,3 +1,5 @@
+//Um exemplo que de código que poderia ser compartilhado entre os dois seria:
+
 const camposTexto = document.querySelectorAll("[type=text]");
 const spanErro = document.getElementById("erro");
 
@@ -18,3 +20,5 @@ function validaCampo(campo) {
         campo.classList.add("foco");
     }
 }
+
+//Alterando os pontos necessários no exemplo 1 e 2.

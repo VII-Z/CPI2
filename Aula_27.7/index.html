@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Introdução ao Vue</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar">
+      <div class="product-display">
+      <div class="product-container">
+        <div class="product-image">
+          <img :src="imagem" alt="Imagem de uma camiseta com o símbolo de Prótons na frente">
+        </div>
+        <div class="product-info">
+          <h1>{{ produto }}</h1>
+          <p>{{ descricao }}</p>
+          <p v-if="estoque > 10">Em estoque</p>
+          <p v-else-if="estoque <= 10 && estoque > 0">Quase esgotado!</p>
+          <p v-else>Esgotado</p>
+          <p v-if="promocao">Em promoção!!</p>
+          <a :href="url" target="_blank">Saiba Mais</a>
+          <p>Composição:
+            <ul>
+              <li v-for="detalhe in detalhes" :key="detalhes">{{detalhe.material}}</li>
+            </ul>
+          </p>
+          Cores disponíveis:
+          <div v-for="item in cores" :key="item.id">{{ item.cor }}</div>
+        </div>
+      </div>
+      </div>
+      </div>  
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
