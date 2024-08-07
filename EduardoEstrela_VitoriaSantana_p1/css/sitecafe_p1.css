@@ -72,15 +72,37 @@ hr{
 .tabela{
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
 }
-#maquina_cafe{
-    border-collapse: collapse;
+caption{
+    border: 2px solid #664422;
+    background-color: #907968;
+    color: white;
 }
-.tabela th,td{
-    border: 1px solid black
+.tabela th{
+    color: white;
+    background-color: #907968;
+    border: 2px solid #664422;
+}
+.tabela td{
+    border: 2px solid #664422;
+    background-color: white;
+    color: #664422;
 }
 .tabela tr{
-    border: 1px solid black
+    border: 2px solid #664422;
+}
+.tabela img{
+    width: 80%;
+    height: auto;
+}
+#tipo{
+    background-color: #EACEAC;
+    color: #664422;
+    font-weight: bold;
+}
+#preco{
+    color: red;
 }
 /* Sachês*/
 
