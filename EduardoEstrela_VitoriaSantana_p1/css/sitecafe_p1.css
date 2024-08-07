@@ -1,31 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 body{
-    font-family: "Handlee",sans-serif;
-    font-size: 1.2rem;
-    color: #FFEBB7;
+    font-family: "Times New Roman",sans-serif;
+    font-size: 1.5rem;
+    color: #E0CE9C;
+    margin: 0;
+    padding: 0;
     background-image: url("/EduardoEstrela_VitoriaSantana_p1/img/Fundo.jpg");
   
 }
 
-.container {
+.header{
     display: flex;
     flex-direction: row;
-    height: 100vh;
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    color: #d8bfa4;
-    padding: 20px;
-    width: 100%;
-    font-size: 1.3rem;
+    justify-content: space-between;
 }
 
 .header img{
-    width: 500px;
-    height: 150px;
+    padding-top: 0.5%;
+    width: 35%;
+    height: 15%;
 }
 
+.header p{
+    text-align: right;
+    margin: 5px;
+    margin-right: 10px;
 
+}
+
+hr{
+    border: 2px solid #8d8d8d;
+    margin-right: 65%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
