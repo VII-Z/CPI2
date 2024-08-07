@@ -7,7 +7,7 @@ body{
     background-image: url("/EduardoEstrela_VitoriaSantana_p1/img/Fundo.jpg");
   
 }
-
+/* Index */
 .header{
     display: flex;
     flex-direction: row;
@@ -24,6 +24,7 @@ body{
     text-align: right;
     margin: 5px;
     margin-right: 10px;
+    font-style: italic;
 
 }
 
@@ -36,3 +37,31 @@ hr{
     display: flex;
     flex-direction: row;
 }
+
+.menu{
+    margin: 20px 15px 0px 20px;
+}
+
+.menu li{
+    padding-bottom: 15px;
+    list-style: circle;
+    font-size: 1.5rem;
+}
+
+a{ color: inherit;}
+
+/*História*/
+.fonte{
+    text-align: right;
+    padding-right: 2%;
+    font-style: italic;
+}
+#fonte{
+    text-decoration: none;
+}
+/*Máquinas*/
+
+/* Sachês*/
+
+/*Compras*/
+
