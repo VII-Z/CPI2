@@ -48,9 +48,18 @@ hr{
     font-size: 1.5rem;
 }
 
-a{ color: inherit;}
+.menu a{
+    color:#E0CE9C;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    text-decoration: underline;
+}
 
 /*História*/
+#amarela{
+    border: 2px solid #E0CE9C;
+}
 .fonte{
     text-align: right;
     padding-right: 2%;
@@ -60,7 +69,19 @@ a{ color: inherit;}
     text-decoration: none;
 }
 /*Máquinas*/
-
+.tabela{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#maquina_cafe{
+    border-collapse: collapse;
+}
+.tabela th,td{
+    border: 1px solid black
+}
+.tabela tr{
+    border: 1px solid black
+}
 /* Sachês*/
 
 /*Compras*/
