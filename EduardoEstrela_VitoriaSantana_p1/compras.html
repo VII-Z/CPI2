@@ -16,6 +16,18 @@
     <link rel="stylesheet" href="css/sitecafe_p1.css" />
   </head>
   <body>
+<header class="header">
+      <img
+        src="img/Logo_Pequeno.png"
+        alt="Logo (Trem com Expresso do Café escrito ao lado)"
+      />
+      <p>
+        Avenida Mochaccino, 10<br />
+        Tel:(21) 1234-5678<br />
+        <a href="mailto:_blank">contato@coffe.com.br</a>
+      </p>
+    </header>
+
     <hr id="amarela"/>
     <div class="container">
       <nav class="menu">
@@ -27,9 +39,12 @@
           <li><a href="compras.html">Compras</a></li>
         </ul>
       </nav>
-    <div>
+    <main>
       <form>
-        <fieldset>
+							<table>
+											<tr>
+															<td colspan="2">
+        <fieldset class="on-table">
           <legend>Dados de Identificação</legend>
           <div>
             <label for="nome">Nome:</label>
@@ -48,39 +63,61 @@
             <input type="text" id="endereco" name="endereco" />
           </div>
         </fieldset>
-        <fieldset>
+
+															</td>
+											</tr>
+											<tr>
+															<td>
+        <fieldset class="on-table" id="produto">
           <legend>Produtos</legend>
           <div>
             <label for="maquinas">Máquinas:</label>
             <select id="maquinas" name="maquinas">
-              <option value="dolce-gusto">Dolce Gusto</option>
-              <option value="nespresso">Nespresso</option>
-              <option value="senseo">Senseo</option>
-            </select>
+										<optgroup label="Dolce Gusto">
+              <option value="Picolo">Picolo</option>
+										</optgroup>
+										<optgroup label="Nespresso">
+              <option value="Inissia-C40">Inissia C40</option>
+              <option value="U-C50">U C50</option>
+										</optgroup>
+										<optgroup label="Senseo">
+							<option value="HD7811/96">HD7811/96</option>
+										</optgroup>
+						</select>
           </div>
           <div>
             <label for="saches">Sachês:</label>
             <select id="saches" name="saches">
+										<optgroup label="Dolce Gusto">
               <option value="expresso">Expresso</option>
               <option value="descafeinado">Descafeinado</option>
+										</optgroup>
+										<optgroup label="Nespresso">
               <option value="livanto">Livanto</option>
               <option value="ristretto">Ristretto</option>
               <option value="vanilio">Vanilio</option>
+										</optgroup>
+										<optgroup label="Senseo">
               <option value="classico">Clássico</option>
               <option value="intenso">Intenso</option>
-            </select>
+										</optgroup>
+						</select>
           </div>
           <div>
             <label for="selecionados">Selecionados:</label>
-            <textarea id="selecionados" name="selecionados"></textarea>
-            <button type="button">remover</button>
+						<button type="button">remover</button>
+						<br />
+            <textarea id="selecionados" name="selecionados" rows="5" cols="30"></textarea>
           </div>
           <div>
             <label for="valor">Valor:</label>
             <input type="text" id="valor" name="valor" />
           </div>
         </fieldset>
-        <fieldset>
+															</td>
+															<td>
+
+        <fieldset class="on-table">
           <legend>Forma de Pagamento</legend>
           <div>
             <label>
@@ -131,11 +168,14 @@
             </div>
           </fieldset>
         </fieldset>
+															</td>
+											</tr>
+							</table>
         <div>
           <button type="submit">Enviar</button>
           <button type="reset">Limpar</button>
         </div>
       </form>
-    </div>
+    </main>
   </body>
 </html>
